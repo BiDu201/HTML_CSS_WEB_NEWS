@@ -1,0 +1,1132 @@
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+/*Chọn tất cả phần tử*/
+*{
+    box-sizing: border-box; /*border-box: Khi thiết lập giá trị này, thì width và heigh sẽ bao gồm cho cả phần nội dung, padding và border nhưng không bao gồm margin*/
+    padding: 0;
+    margin: 0;
+}
+
+/*Chọn các phần tử gốc của văn bản*/
+:root{
+    --heading: 'Montserrat', sans-serif;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background: var(--primary-color);
+}
+
+/* global styling */
+
+img{
+    width: 100%;
+    border-radius: 5px;
+}
+ul{
+    list-style: none; /*Không hiển thị chỉ mục của các danh mục trong danh sách*/
+}
+
+a{
+    text-decoration: none; /*Không hiển thị gạch chân*/
+    color: #000;
+}
+
+hr{
+    width: 95vw;
+    margin: 0 auto;
+}
+
+/* header */
+.top-head{
+    display: flex; /*Tự động cân đối kích thước linh hoạt*/
+    justify-content: space-between; /*justify: sắp xếp phần tử khi container không chứ hết, space-between: giúp cho các khoảng cách giữa các thành phần luôn bằng nhau, tuy nhiên phần tử đầu luôn nằm sát trái, phần tử cuối luôn nằm sát phải*/
+    align-items: center;
+    margin: 0 auto;
+    background: #e71313;
+    color: var(--primary-color);
+    padding: 20px 30px;
+}
+
+/*Thanh menu sổ xuống khi reponsive*/
+.top-head .fas{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/******* js related styling *****/
+
+.times-btn{
+    display: none;
+}
+
+/*nav reponsive*/
+.nav-bar{
+    background:#252525;
+    height: 0;
+    overflow: hidden; /*Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được dấu đi.*/
+}
+
+.show-nav{
+    height: auto; /*Định chiều cao tự động*/
+}
+
+/********************/
+
+.nav-bar ul li{
+    text-align: center;
+    display: block; /*Luôn được xuống dòng và chiếm toàn bộ width nếu width không được set*/
+    padding: 15px 0;
+    position: relative; /*Định vị trí tuyệt đối cho các thành phần, không gây ảnh hưởng tới vị trí ban đầu hay các thành phần khác.*/
+    transition: all 1s ease-in-out;
+}
+
+.nav-bar ul li a{
+    color: white;
+    text-transform: uppercase; /*In đậm toàn bộ*/
+    font-weight: bold;
+}
+
+/* Thêm hiệu ứng sau thẻ*/
+.nav-bar ul li::after{
+    content: ""; /*content sử dụng kèm với bộ chọn :before, :after để chèn nội dung được tạo.*/
+    height: 3px;
+    width: 0;
+    background: tomato;
+    position: absolute; /*định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài*/
+    left: 10px;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-bar ul li:hover::after{
+    width: 100%;
+}
+
+/*cai mau chuyen darkmode*/
+:root{
+    --primary-color: #fff;
+    --secondary-color:#212121;
+    --red:#e71313;
+    --blue:#00739f;
+}
+[data-theme="dark"] {
+    --primary-color: #212121;
+    --secondary-color:#fff;
+    --red:#fff;
+    --blue:#14aeeb;
+}
+
+/*Nut on/off darkmode*/
+.theme-switch-wrapper {
+    display: flex;
+    position: absolute; /*định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài*/
+    top: 22px;
+    right: 65px;
+  }
+  
+  .theme-switch {
+    display: inline-block; /*Có tác dụng xác định các thành phần sẽ được hiển thị theo khối nhưng là các khối inline.*/
+    height: 34px;
+    position: relative; /*Định vị trí tuyệt đối cho các thành phần, không gây ảnh hưởng tới vị trí ban đầu hay các thành phần khác.*/
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  /*Thiết lập hiển thị cho bao ngoài*/
+  .slider {
+    background-color: #999;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute; /*định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài*/
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  /*Thiết lập hiển thị cho nút trong*/
+  .slider:before {
+    content: "";
+    background-color: var(--primary-color); /*Sau khi bật dark mode sẽ áp dụng màu trong root*/
+    bottom: 4px;
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  /*Hiển thị màu background của bao ngoài nút sau khi bấm*/
+  input:checked + .slider {
+    background-color: #fff;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  /*Bo tròn cho bao ngoài nút*/
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  /*Bo tròn cho nút trong*/
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/*Tim kiem*/
+.search-box{
+    position: absolute;
+    left: 330px;
+    top:38px;
+    transform: translate(-50%, -50%); /*Mở ra hai bên*/
+    background: #fff;
+    height: 45px;
+    border-radius: 40px;
+    padding: 10px;
+    z-index: 1;
+}
+
+.search-box:hover > .search-txt{
+    width: 150px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn{
+    background: #252525;
+}
+
+.search-btn{
+    color: tomato;
+    float:right;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.search-txt{
+    border:none;
+    background: none;
+    outline: none;
+    float: right;
+    padding:0;
+    color: #252525;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 25px;
+    width: 0px;
+}
+
+/*menu*/
+.menu{
+    position: fixed; /* vị trí cố định*/
+    width: 0px; /* chiều rộng ban đầu 0 (ẩn)*/
+    height: 100%;
+    background: #eee;
+    text-transform: uppercase; /*In hoa cho tất cả*/
+    z-index: 100;
+    transition: ease-in-out 0.3s;
+    font-weight: bold;
+}
+
+.menu.hide{
+    width: 95%; /*chiều rộng sau khi show menu*/
+    top: 0;
+}
+
+.menu_nav{
+    width: 100%;
+    overflow: hidden;
+}
+
+.menu_nav li{
+    display: flex;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.menu_nav li:hover{
+    background-color: rgb(196, 196, 196);
+}
+
+/*khi hover chuột hiển thị gạch ở chân*/
+.menu_child li a:hover{
+    text-decoration: underline;
+}
+.menu_title{
+    width: 240px;
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    transition: linear 0.3s;
+    background: #00739f;
+    
+}
+.menu_child{
+    padding: 10px;
+}
+.menu_child li{
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+}
+
+.menu_child li a{
+    font-weight: normal;
+}
+
+/*Nút menu*/
+.toggle_menu{
+    position: absolute;
+    top: 0px;
+    right: -30px;
+    width: 30px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+
+.toggle_menu:hover{
+    background: rgba(192,192,192,1);
+}
+
+/*login*/
+.login{
+    position: fixed;
+    width: 0px;
+    height: 100%    ;
+    background: var(--primary-color);
+    z-index: 100;
+    transition: ease-in-out 0.2s;
+    font-weight: bold;
+    right: 0;
+}
+
+.login.show{
+    width: 30%;
+    top: 0;
+}
+
+.toggle_login{
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    width: 30px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+
+.toggle_login:hover{
+    background: rgba(192,192,192,1);;
+}
+
+.login_head{
+    background: #e71313;
+    height: 75px;
+    text-align: center;
+    position: relative;
+}
+
+.login_head .logo{
+    color: var(--primary-color);
+    font-size: 3rem;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+.login_content{
+    padding: 30px;
+    font-weight: 500;
+}
+
+.login_text{
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+/*social*/
+.login_social .social-fb{
+    background: #3b5998;
+}
+
+.login_social .social-gg{
+    background: #d34836;
+}
+
+.login_social .social-tw{
+    background: #018fe5;
+}
+
+.login_social .social{
+    color: #fff;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.login_social .social i{
+    font-size: 16px;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    border-right: 1px solid rgba(255,255,255,.3);
+    float: left;
+    padding: 15px 0;
+}
+
+.login_social .social span{
+    padding: 14px 0 12px 14px;
+    display: inline-block;
+}
+
+/*-----Hoặc-----*/
+.login_subhead{
+    text-align: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.login_subhead span{
+    font-size: 14px;
+    color: #999;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+    background: var(--primary-color);
+    padding: 0 15px;
+}
+
+.login_subhead:after {
+    position: absolute;
+    content: '';
+    background: #ddd;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 50%;
+}
+
+/*form mail*/
+.form{
+    margin-bottom: 1rem;
+}
+
+.login_email label{
+    font-weight: 500;
+    margin-top: 0;
+    display: inline-block;
+    cursor: default;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+ }
+
+.login_email .form-control {
+    height: 35px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    font-size: 13px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+}
+
+.login_email .btn.inactive{
+    background: #bbb;
+}
+
+.login_email .btn {
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    
+    height: 45px;
+    padding: 14px 0;
+    margin-bottom: 15px;
+}
+
+.btn {
+    font-size: 12px;
+    font-size: 1.2rem;
+    color: #fff;
+    border: none;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    
+}
+
+/*quy dinh su dung*/
+.user-policy {
+    font-size: 13px;
+    color: var(--blue);
+    float: left;
+}
+
+/*quen pass*/
+.forget-password {
+    float: right;
+    font-size: 13px;
+    color: var(--blue);
+}
+
+/* banner */
+.banner{
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 30px 0;
+    margin-top: 8px;
+}
+
+.banner-main-content{
+    padding: 0 2rem;
+    line-height: 1.7;
+    color: var(--secondary-color);
+}
+
+.banner-main-content h2{
+    font-size: 2rem;
+    font-family: var(--heading);
+}
+
+.banner-main-content h3{
+    padding: 1rem 0;
+}
+
+.banner-main-content button{
+    border: none;
+    background: var(--red);
+    padding: 14px 18px;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: background 1s ease;
+    border-radius: 6px;
+}
+
+.banner-main-content button a{
+    color: var(--primary-color);
+    transition: color 1s ease;
+}
+
+.banner-main-content button:hover{
+    background:var(--primary-color);
+}
+
+.banner-main-content button:hover a{
+    color: var(--secondary-color);
+}
+
+
+.current-news-head{
+    background: var(--primary-color);
+    padding: 20px;
+    font-size: 12px;
+    margin: 20px 0;
+}
+
+.current-news-head h3{
+    padding: 6px;
+    cursor: pointer;
+    position: relative;
+    color: var(--secondary-color);
+}
+
+.current-news-head h3:hover::before{
+    content: ">> ";
+    position: absolute;
+    left: -12px;
+}
+
+.current-news-head span{
+    display: block;
+    font-family: var(--heading);
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.hot-topic{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 12px;
+    height: 300px;
+}
+
+.hot-topic img{
+    display: block;
+    border-radius: 0;
+    height: 300px;
+}
+
+.hot-topic-content{
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    line-height: 1.3;
+    color: #fff;
+}
+
+.hot-topic h2{
+    padding: 10px 0;
+    font-size: 16px;
+    text-shadow: 0 0 2px #000;
+}
+
+.hot-topic h3{
+    padding: 10px 0;
+    font-size: 16px;
+    text-shadow: 0 0 2px #000;
+}
+
+.hot-topic p{
+    padding: 10px 0;
+    font-size: 15px;
+    text-shadow: 0 0 2px #000;
+    padding: 12px 10px;
+}
+
+.hot-topic-content a{
+    display: block;
+    background: #fff;
+    border: none;
+    width: 95px;
+    border-radius: 2px;
+    text-align: center;
+    padding: 7px 10px;
+    font-size: 14px;
+    margin: 10px 0 10px 10px;
+}
+
+.hot-topic-content a:hover{
+    text-decoration: underline;
+}
+
+/*1*/
+.sliders{
+    overflow: hidden;
+    padding-right: 10px;
+  }
+  
+  .slides{
+    width: 506%;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 1.5s;
+  }
+  
+  /*css for manual slide navigation*/
+  
+  .navigation-manual{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .manual-btn{
+    border: 0.5px solid var(--secondary-color);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: var(--secondary-color);
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    display: none;
+  }
+  
+  .navigation-auto div{
+    border: 0.5px solid var(--secondary-color);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: var(--secondary-color);
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: var(--secondary-color);
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: var(--secondary-color);
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: var(--secondary-color);
+  }
+
+/*2*/
+  .sliderss{
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .slidess{
+    width: 500%;
+    display: flex;
+  }
+  
+  .slidess input{
+    display: none;
+  }
+  
+  .slidee{
+    width: 20%;
+    transition: 1s;
+  }
+  
+  /*css for manual slide navigation*/
+  
+  .navigation-manuall{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btnn{
+    border: 1px solid var(--secondary-color);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btnn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btnn:hover{
+    background: var(--secondary-color);
+  }
+  
+  #radio5:checked ~ .firstt{
+    margin-left: 0;
+  }
+  
+  #radio6:checked ~ .firstt{
+    margin-left: -20%;
+  }
+  
+  #radio7:checked ~ .firstt{
+    margin-left: -40%;
+  }
+  
+  #radio8:checked ~ .firstt{
+    margin-left: -60%;
+  }
+  
+/** main ***/
+
+main a{
+    padding: 15px 0;
+    display: block;
+    transition: all 0.5s;
+    color:var(--secondary-color);
+}
+
+main span{
+    transition: padding-left 0.5s;
+}
+
+main a:hover span{
+    padding-left: 5px;
+}
+
+main a:hover{
+    color: #7ac64d;
+}
+
+/* main container left */
+
+.main-container-left{
+    padding: 30px 10px;
+    color: var(--secondary-color);
+}
+.main-container-left a{
+    padding: 15px 0;
+    display: block;
+    transition: all 0.5s;
+    color: #252525;
+}
+
+.main-container-left > h2{
+    padding: 15px 0 15px 30px;
+}
+
+.main-container-left h3{
+    padding: 10px 0;
+    font-size: 18px;
+    font-family: var(--heading);
+}
+
+.main-container-left p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.main-container-left article{
+    padding: 10px;
+}
+
+.container-top-left{
+    padding: 15px 30px;
+}
+.container-top-left a{
+    padding: 15px 0;
+    display: block;
+    transition: all 0.5s;
+    color:var(--secondary-color);
+}
+.container-bottom-left{
+    background: #f3f3f3;
+    margin: 15px 30px;
+    color:#252525;
+    border-radius: 5px;
+}
+
+.video{
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+   
+}
+
+.video .fas{
+    left:25%;
+    position: absolute;
+    color: #252525;
+    top: 25%;
+}
+/*** main container right */
+
+.main-container-right{
+    padding: 30px 10px;
+    color: var(--secondary-color);
+}
+
+.main-container-right > h2{
+    padding: 15px 0 15px 30px;
+}
+
+.main-container-right article{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-container-right article:last-child{
+    border-bottom: none;
+}
+
+.main-container-right img{
+    width: 100px;
+    height: 100px;
+    align-self: center;
+}
+
+.main-container-right h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    align-self: center;
+}
+
+.main-container-right article h2{
+    font-size: 18px;
+    padding: 10px 0;
+    font-family: var(--heading);
+}
+
+.main-container-right article p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.main-container-right article div{
+    margin-right: 10px;
+}
+
+
+/****** footer *****/
+
+footer{
+    background: #252525;
+    color: #f3f3f3;
+    padding: 30px;
+}
+
+footer h2{
+    padding: 10px 0;
+}
+
+.footer-left h2 a{
+    color: #f3f3f3;
+}
+
+footer p{
+    padding: 10px 0;
+    line-height: 1.3;
+}
+
+.footer-left, 
+.footer-right, .footer-between{
+    margin: 0 20px;
+}
+
+footer > p{
+    text-align: center;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+.footer-right i{
+    font-size: 1.8rem;
+    color: #808080;
+}
+
+.footer-right input{
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #808080;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.footer-right div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 200px;
+    padding: 10px 0;
+    border-bottom: 1.6px solid #808080;
+}
+
+/* social icons */
+.social-icons{
+    flex: 0 1 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+.social-icons .fab{
+    color: #fff;
+    font-size: 2rem;
+}
+.social-icons ul{
+    display: flex;
+}
+.social-icons ul li{
+    padding: 10px 25px 10px 25px ;
+}
+
+/*Nút quay lại đầu trang*/
+#backtop{
+    width: 40px;
+    height: 40px;
+    background: rgb(226, 223, 223);
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom:40px;
+    right:20px;
+    cursor: pointer;
+}
+
+/*max-width: chiều rộng tối đa của viewport*/
+@media(max-width: 460px){
+    .hot-topic-content h2{
+        font-size: 15px;
+    }
+
+    .main-container-right article{
+        display: block;
+    }
+
+    .main-container-right article img{
+        display: none;
+    }
+
+}
+
+/*Áp dụng độ rộng <=500px*/
+@media(max-width: 500px){
+    .main-container-right article{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .main-container-right article h4{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        align-self: flex-start;
+    }
+
+    .main-container-right article img{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .main-container-right article div{
+        grid-row: 1/3;
+        grid-column: 2/3;
+    }
+}
+
+/*min-width: Chiều rộng tối thiểu của viewport*/
+@media(min-width: 768px){
+    .banner-sub-content{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr); /*repeat(số cột trên dòng, độ rộng cột) với độ rộng 2/2 hoặc 50%*/
+    }
+
+    .container-bottom-left{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media(min-width: 800px){
+    /* nav */
+    .ham-btn, .times-btn{
+        display: none!important; /*!improtant múc độ ưu tiên cao nhất*/
+    }
+
+    .navigation-container{
+        display:flex;
+        background: #252525;
+        align-items: center;
+        flex-wrap:wrap;
+    }
+
+    .top-head{
+        flex: 0 0 15%;
+    }
+
+    .nav-bar{
+        flex: 1 0 auto;
+        height: 100%;
+        background: transparent;
+    }
+
+    .nav-bar nav ul{
+        display: flex;
+        justify-content: center;
+    }
+    .nav-bar nav ul li{
+        padding-left: 20px;
+    }
+
+    .nav-bar nav ul li:hover{
+        background: none;
+    }
+
+    .footer-container{
+        display: flex;
+    }
+
+    .footer-right,
+    .footer-left,.footer-between{
+        flex: 1;
+    }
+}
+
+@media(min-width: 992px){
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1080px){
+    .banner{
+        grid-template-columns: 1fr 2fr;
+    }
+}

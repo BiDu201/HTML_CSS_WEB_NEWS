@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+ <html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--Logo title-->
+        <link rel="icon" href="images/LOGOVN.jpg">
+        <title>Thời sự</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--viewport:kích thước hiển thị của giao diện | device:thiết bị sử dụng-->
+        <link rel="stylesheet" href="css_childweb.css">
+        <!--Backtop-->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>    
+        <!--Bottstrap--> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+        <style>
+            ul{
+                margin-bottom: 0;
+            }
+
+            hr{
+                width: 95vw;
+                margin: 1rem 0 0 1.5rem;
+                color: var(--secondary-color);
+            }
+
+            body{
+                background-color: var(--primary-color);
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+
+            article{
+                margin-top: 15px;
+            }
+
+            .page-link{
+                color: #000;
+            }
+
+            .page-item.active .page-link{
+                background-color: #9f224e;
+                border-color: #9f224e;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- header -->
+        <header>
+            <div class = "navigation-container">
+                <div class = "top-head">
+                    <div class = "web-name">
+                         <a href="Trangchu.html" style="text-decoration: none; color: var(--primary-color);"><h1>VNNEWS</h1></a> 
+                    </div>
+
+                    <div class = "ham-btn">
+                        <span>
+                            <i class = "fas fa-bars"></i>
+                        </span>
+                    </div>
+
+                    <div class = "times-btn">
+                        <span>
+                            <i class = "fas fa-times"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- nav bar -->
+
+                <div class ="nav-bar" id = "nav-bar">
+                    <nav>
+                        <ul>
+                            <li><a href = "ThoiSu.html">thời sự</a></li>
+                            <li><a href = "TheGioi.html">thế giới</a></li>
+                            <li><a href = "TheThao.html">thể thao</a></li>
+                            <li><a href = "GiaiTri.html">giải trí</a></li>
+                            <li><a href = "CongNghe.html">công nghệ</a></li>
+                            <li><a href = "PhapLuat.html">pháp luật</a></li>
+                            <li><a href = "SucKhoe.html">sức khỏe</a></li>
+                            <li><a href = "TamSu.html">tâm sự</a></li>
+                        </ul>
+                    </nav>
+                    <!--nut darkmode-->
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!--Thanh tìm kiếm-->
+                    <div class="search-box">
+                        <input class="search-txt" type="text" placeholder="Tìm kiếm">
+                            <a class="search-btn">
+                                 <i class="fas fa-search"></i>
+                            </a>
+                    </div>
+        </header>
+                
+        <!--menu-->
+        <div class="menu">
+            <div class="toggle_menu"><i class="fas fa-bars"></i></div>
+            <ul class="menu_nav">
+                <li>
+                    <a href = "ThoiSu.html" class="menu_title">thời sự</a>
+                    <ul class="menu_child">
+                        <li><a href="#">chính trị</a></li>
+                        <li><a href="#">dân sinh</a></li>
+                        <li><a href="#">lao động - việc làm</a></li>
+                        <li><a href="#">giao thông</a></li>
+                    </ul>           
+                </li>
+                <li>
+                    <a href = "TheGioi.html" class="menu_title">thế giới</a>
+                    <ul class="menu_child">
+                        <li><a href="#">kinh tế</a></li>
+                        <li><a href="#">quân sự</a></li>
+                        <li><a href="#">tư liệu</a></li>
+                        <li><a href="#">cuộc sống đó đây</a></li>
+                    </ul>    
+                </li>
+                <li>
+                    <a href = "TheThao.html" class="menu_title">thể thao</a>
+                    <ul class="menu_child">
+                        <li><a href="#">bóng đá</a></li>
+                        <li><a href="#">lịch thi đấu</a></li>
+                        <li><a href="#">tennis</a></li>
+                        <li><a href="#">v-race</a></li>
+                        <li><a href="#">các môn khác</a></li>
+                    </ul>    
+                </li>
+                <li>
+                    <a href = "GiaiTri.html" class="menu_title">giải trí</a>
+                    <ul class="menu_child">
+                        <li><a href="#">phim</a></li>
+                        <li><a href="#">truyền hình</a></li>
+                        <li><a href="#">đời nghệ sĩ</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "CongNghe.html" class="menu_title">công nghệ</a>
+                    <ul class="menu_child">
+                        <li><a href="#">sản phẩm mới</a></li>
+                        <li><a href="#">thủ thuật</a></li>
+                        <li><a href="#">esports</a></li>
+                        <li><a href="#">xu hướng</a></li>
+                        <li><a href="#">tin tức</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "PhapLuat.html" class="menu_title">pháp luật</a>
+                    <ul class="menu_child">
+                        <li><a href="#">hồ sơ phá án</a></li>
+                        <li><a href="#">tư vấn</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "SucKhoe.html" class="menu_title">sức khỏe</a>
+                    <ul class="menu_child">
+                        <li><a href="#">làm đẹp</a></li>
+                        <li><a href="#">giới tính</a></li>
+                        <li><a href="#">khỏe đẹp mỗi ngày</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "TamSu.html" class="menu_title">tâm sự</a>
+                    <ul class="menu_child">
+                        <li><a href="#">chuyên gia gỡ rối</a></li>
+                        <li><a href="#">hẹn hò</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">đời sống</a>
+                    <ul class="menu_child">
+                        <li><a href="#">người sống quanh ta</a></li>
+                        <li><a href="#">gia đình</a></li>
+                        <li><a href="#">ẩm thực</a></li>
+                        <li><a href="#">du lịch</a></li>
+                        <li><a href="#">cộng đồng</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">xe</a>
+                    <ul class="menu_child">
+                        <li><a href="#">thị trường xe</a></li>
+                        <li><a href="#">tư vấn xe</a></li>
+                        <li><a href="#">diễn đàn xe</a></li>
+                        <li><a href="#">đánh giá xe</a></li>
+                        <li><a href="#">khám phá xe</a></li>
+                        <li><a href="#">video</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">khoa học</a>
+                    <ul class="menu_child">
+                        <li><a href="#">trong nước</a></li>
+                        <li><a href="#">tin tức</a></li>
+                        <li><a href="#">phát minh</a></li>
+                        <li><a href="#">ứng dụng</a></li>
+                        <li><a href="#">thường thức</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">video</a>
+                    <ul class="menu_child">
+                        <li><a href="#">thời sự</a></li>
+                        <li><a href="#">phóng sự</a></li>
+                        <li><a href="#">giải trí</a></li>
+                        <li><a href="#">món ngon</a></li>
+                        <li><a href="#">thể thao</a></li>
+                        <li><a href="#">thế giới</a></li>
+                        <li><a href="#">trực tuyến</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">việc làm</a>
+                </li>
+            </ul>
+        </div>
+
+        <h1 style="text-align: center; margin-top: 1rem; "><a href="#" style="text-decoration: none; color: var(--redblack);">THỜI SỰ</a></h1>
+        <div class="container" align ="center">
+            <button type="button" class="btn btn-outline-warning" style="border-radius: 20px;">Chính trị</button>
+            <button type="button" class="btn btn-outline-warning" style="border-radius: 20px;">Dân sinh</button>
+            <button type="button" class="btn btn-outline-warning" style="border-radius: 20px;">Lao dộng - việc làm</button>
+            <button type="button" class="btn btn-outline-warning" style="border-radius: 20px;">Giao thông</button>
+        </div>
+
+        <hr>
+        
+        <main > 
+		<div class="row" style="padding: 40px;">
+		<div class="col-sm" style="border-top-left-radius: 5px; border-bottom-left-radius:5px">
+			<div class="card-sm-6">
+				  <article>
+                    	
+                    <div>
+                        <h2>Cháy 10 cửa hàng chợ Mường Thanh</h2>
+
+                        <p>Ngọn lửa bao trùm, thiêu rụi 10 cửa hàng tại chợ Mường Thanh, chợ lâu đời và lớn nhất TP Điện Biên Phủ, rạng sáng 6/6.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/282245940-393288822744456-4140-9825-8610-1654482696.png">
+                    <div class="card-footer">
+						<small class="text-muted">Cập nhật 3 phút trước</small>
+					
+						</div>
+                </article>
+			</div>
+		</div>
+		<div class="col-sm">
+			<div class="card-sm-6">
+				  <article>
+                    
+                    <div>
+                        <h2>Nhiều nơi phát sinh thủ tục làm chậm tiền hỗ trợ thuê trọ</h2>
+
+                        <p>Một số doanh nghiệp sợ lao động trục lợi nên tự ý đòi giấy tạm trú, hợp đồng thuê nhà, làm chậm tiến độ phê duyệt hồ sơ hỗ trợ thuê trọ.
+
+						</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/img5722-1654341816946991692431-3710-1654353121.jpg">
+                    <div class="card-footer">
+						<small class="text-muted">Cập nhật 3 phút trước</small>
+					
+						</div>
+                </article>
+			</div>
+		</div>
+		<div class="col-sm" style="border-top-right-radius: 5px; border-bottom-right-radius:5px">
+			<div class="card-sm-6">
+				  <article>
+                
+                    <div>
+                        <h2>Chủ tịch huyện bị khiển trách vì để xảy ra khai thác đá trái phép</h2>
+
+                        <p>Ông Nguyễn Đình Tùng, Chủ tịch huyện Quỳ Hợp, cùng hai thuộc cấp bị kỷ luật vì để xảy ra tình trạng khai thác đá trắng trái phép trên địa bàn.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/da-trang-3304-1627176940-3165-1654308010.jpg">
+                    <div class="card-footer">
+						<small class="text-muted">Cập nhật 3 phút trước</small>
+					
+						</div>
+                </article>
+			</div>
+		</div>
+	</div>
+	
+    <hr>
+
+	<div class="row" style="padding: 40px;">
+		<div class="col-sm" style="border-top-left-radius: 5px; border-bottom-left-radius:5px">
+			<div class="card-sm-6">
+				  <article>
+                   
+                    <div>
+                        <h2>Ông Nguyễn Thanh Long bị xác định 'làm thất thoát lớn ngân sách'</h2>
+
+                        <p>Các cơ quan chức năng được yêu cầu thi hành kỷ luật về hành chính theo quy định với tập thể, cá nhân đã bị kỷ luật đảng.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/PHAM6201-JPG-7993-1654344941.jpg">
+                    <div class="card-footer">
+						<small class="text-muted">Cập nhật 3 phút trước</small>
+					
+						</div>
+                </article>
+			</div>
+		</div>
+		<div class="col-sm">
+			<div class="card-sm-6">
+				  <article>
+                   
+                    <div>
+                        <h2>Ba ngư dân tử vong sau va chạm trên biển</h2>
+
+                        <p>Đánh bắt cách bờ khoảng 7 hải lý, tàu cá bị một tàu không rõ số hiệu va chạm khiến ba ngư dân tử vong, lúc 3h30 ngày 6/6.
+                        </p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/c0da00d43134f16aa825-8866-1654482810.jpg">
+                    <div class="card-footer">
+						<small class="text-muted">Cập nhật 3 phút trước</small>
+					
+						</div>
+                </article>
+			</div>
+		</div>
+		<div class="col-sm" style="border-top-right-radius: 5px; border-bottom-right-radius:5px">
+			<div class="card-sm-6">
+				  <article>
+                    
+                    <div>
+                        <h2>Ôtô gãy đôi sau khi đâm dải phân cách, quốc lộ 1A ùn tắc</h2>
+
+                        <p>Xe tải chở đá hoa cương gãy đôi khi tông vào dải phân cách quốc lộ 1A, huyện Hàm Thuận Nam, khiến tuyến đường kẹt xe nhiều giờ, sáng 6/6.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/06e2edc5f12631786837-165448766-6994-7284-1654488021.jpg">
+                    <div class="card-footer">
+						<small class="text-muted">Cập nhật 3 phút trước</small>
+					
+						</div>
+                </article>
+			</div>
+		</div>
+	</div>
+
+    <hr>
+
+    <div class="row" style="padding: 40px;">
+		<div class="col-sm" style="border-top-left-radius: 5px; border-bottom-left-radius:5px">
+			<div class="card-sm-6">
+				  <article>
+                    	
+                    <div>
+                        <h2>Cháy 10 cửa hàng chợ Mường Thanh</h2>
+
+                        <p>Ngọn lửa bao trùm, thiêu rụi 10 cửa hàng tại chợ Mường Thanh, chợ lâu đời và lớn nhất TP Điện Biên Phủ, rạng sáng 6/6.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/282245940-393288822744456-4140-9825-8610-1654482696.png">
+                    <div class="card-footer">
+						<small class="text-muted">Cập nhật 3 phút trước</small>
+					
+						</div>
+                </article>
+			</div>
+		</div>
+		<div class="col-sm">
+			<div class="card-sm-6">
+				  <article>
+                    
+                    <div>
+                        <h2>Nhiều nơi phát sinh thủ tục làm chậm tiền hỗ trợ thuê trọ</h2>
+
+                        <p>Một số doanh nghiệp sợ lao động trục lợi nên tự ý đòi giấy tạm trú, hợp đồng thuê nhà, làm chậm tiến độ phê duyệt hồ sơ hỗ trợ thuê trọ.
+
+						</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/img5722-1654341816946991692431-3710-1654353121.jpg">
+                    <div class="card-footer">
+						<small class="text-muted">Cập nhật 3 phút trước</small>
+					
+						</div>
+                </article>
+			</div>
+		</div>
+		<div class="col-sm" style="border-top-right-radius: 5px; border-bottom-right-radius:5px">
+			<div class="card-sm-6">
+				  <article>
+                
+                    <div>
+                        <h2>Chủ tịch huyện bị khiển trách vì để xảy ra khai thác đá trái phép</h2>
+
+                        <p>Ông Nguyễn Đình Tùng, Chủ tịch huyện Quỳ Hợp, cùng hai thuộc cấp bị kỷ luật vì để xảy ra tình trạng khai thác đá trắng trái phép trên địa bàn.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/da-trang-3304-1627176940-3165-1654308010.jpg">
+                    <div class="card-footer">
+						<small class="text-muted">Cập nhật 3 phút trước</small>
+					
+						</div>
+                </article>
+			</div>
+		</div>
+	</div>
+	
+    <hr>
+
+	<div class="row" style="padding: 40px;">
+		<div class="col-sm" style="border-top-left-radius: 5px; border-bottom-left-radius:5px">
+			<div class="card-sm-6">
+				  <article>
+                   
+                    <div>
+                        <h2>Ông Nguyễn Thanh Long bị xác định 'làm thất thoát lớn ngân sách'</h2>
+
+                        <p>Các cơ quan chức năng được yêu cầu thi hành kỷ luật về hành chính theo quy định với tập thể, cá nhân đã bị kỷ luật đảng.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/PHAM6201-JPG-7993-1654344941.jpg">
+                    <div class="card-footer">
+						<small class="text-muted">Cập nhật 3 phút trước</small>
+					
+						</div>
+                </article>
+			</div>
+		</div>
+		<div class="col-sm">
+			<div class="card-sm-6">
+				  <article>
+                   
+                    <div>
+                        <h2>Ba ngư dân tử vong sau va chạm trên biển</h2>
+
+                        <p>Đánh bắt cách bờ khoảng 7 hải lý, tàu cá bị một tàu không rõ số hiệu va chạm khiến ba ngư dân tử vong, lúc 3h30 ngày 6/6.
+                        </p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/c0da00d43134f16aa825-8866-1654482810.jpg">
+                    <div class="card-footer">
+						<small class="text-muted">Cập nhật 3 phút trước</small>
+					
+						</div>
+                </article>
+			</div>
+		</div>
+		<div class="col-sm" style="border-top-right-radius: 5px; border-bottom-right-radius:5px">
+			<div class="card-sm-6">
+				  <article>
+                    
+                    <div>
+                        <h2>Ôtô gãy đôi sau khi đâm dải phân cách, quốc lộ 1A ùn tắc</h2>
+
+                        <p>Xe tải chở đá hoa cương gãy đôi khi tông vào dải phân cách quốc lộ 1A, huyện Hàm Thuận Nam, khiến tuyến đường kẹt xe nhiều giờ, sáng 6/6.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/06e2edc5f12631786837-165448766-6994-7284-1654488021.jpg">
+                    <div class="card-footer">
+						<small class="text-muted">Cập nhật 3 phút trước</small>
+					
+						</div>
+                </article>
+			</div>
+		</div>
+	</div>
+
+        </main>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav>
+                        <ul class="pagination justify-content-center" style="padding-bottom: 20px;">
+                            <li class="page-item disabled"><a class="page-link" href="#">&laquo;</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                        </ul>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class = "footer-container">
+                <div class = "footer-left">
+                    <h2><a href="#" style="text-decoration: none;">VNNEWS</a></h2>
+                    <p> <b>Giấy phép xuất bản số 110/GP - BTTTT cấp ngày 24.3.2020</b><br>
+                        © 2003-2022 Bản quyền thuộc về Báo Thanh Niên.<br>Cấm sao chép dưới mọi hình thức nếu không có sự chấp thuận bằng văn bản.<br>
+                        </p>
+                </div>
+
+                <div class = "footer-right">
+                    <h2>Liên hệ với chúng tôi</h2>
+                    <p>082.233.3555</p>
+                    <div>
+                        <input type = "text" placeholder = "Địa chỉ Email">
+                        <i class = "fas fa-envelope"></i>
+                    </div>
+                </div>
+
+                <div class = "footer-between">
+                    <h2>Theo dõi VnNews trên</h2>
+                    <!--social icons -->
+                <div class = "social-icons">
+                    <ul>
+                        <li>
+                            <a href= "#"><i class = "fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href= "#"><i class = "fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href= "#"><i class = "fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+
+            <p>Copyright &copy; 1997-2022. Toàn bộ bản quyền thuộc VnNews</p>
+        </footer>
+
+        <script src="script.js" async defer></script>
+        
+        <div id="backtop">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </body>
+</html>

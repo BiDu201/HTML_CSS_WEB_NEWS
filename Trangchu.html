@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+ <html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--Logo title-->
+        <link rel="icon" href="images/LOGOVN.jpg">
+        <title>VNNEWS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--viewport:kích thước hiển thị của giao diện | device:thiết bị sử dụng-->
+        <link rel="stylesheet" href="main.css">
+        <!--Backtop-->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script> 
+    </head>
+
+    <body>
+        <!-- header -->
+        <header>
+            <div class = "navigation-container">
+                <div class = "top-head">
+                    <div class = "web-name">
+                          <a href="Trangchu.html" style="color: var(--primary-color);"><h1>VNNEWS</h1></a> 
+                    </div>
+
+                    <div class = "ham-btn">
+                        <span>
+                            <i class = "fas fa-bars"></i>
+                        </span>
+                    </div>
+
+                    <div class = "times-btn">
+                        <span>
+                            <i class = "fas fa-times"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- nav bar -->
+                <div class = "nav-bar" id = "nav-bar">
+                    <nav>
+                        <ul>
+                            <li><a href = "ThoiSu.html">thời sự</a></li>
+                            <li><a href = "TheGioi.html">thế giới</a></li>
+                            <li><a href = "TheThao.html">thể thao</a></li>
+                            <li><a href = "GiaiTri.html">giải trí</a></li>
+                            <li><a href = "CongNghe.html">công nghệ</a></li>
+                            <li><a href = "PhapLuat.html">pháp luật</a></li>
+                            <li><a href = "SucKhoe.html">sức khỏe</a></li>
+                            <li><a href = "TamSu.html">tâm sự</a></li>
+                        </ul>
+                    </nav>
+
+                <!--Darkmode-->
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+
+            </div>
+
+            <!--Thanh tìm kiếm-->
+                    <div class="search-box">
+                        <input class="search-txt" type="text" placeholder="Tìm kiếm">
+                            <a class="search-btn">
+                                 <i class="fas fa-search"></i>
+                            </a>
+                    </div>
+        </header>
+                
+        <!--Menu-->
+        <div class="menu">
+            <!--Nút thu đóng menu-->
+            <div class="toggle_menu"><i class="fas fa-bars"></i></div>
+
+            <!--Menu chính-->
+            <ul class="menu_nav">
+                <li>
+                    <a href = "ThoiSu.html" class="menu_title">thời sự</a>
+                    <ul class="menu_child">
+                        <li><a href="#">chính trị</a></li>
+                        <li><a href="#">dân sinh</a></li>
+                        <li><a href="#">lao động - việc làm</a></li>
+                        <li><a href="#">giao thông</a></li>
+                    </ul>           
+                </li>
+                <li>
+                    <a href = "TheGioi.html" class="menu_title">thế giới</a>
+                    <ul class="menu_child">
+                        <li><a href="#">kinh tế</a></li>
+                        <li><a href="#">quân sự</a></li>
+                        <li><a href="#">tư liệu</a></li>
+                        <li><a href="#">cuộc sống đó đây</a></li>
+                    </ul>    
+                </li>
+                <li>
+                    <a href = "TheThao.html" class="menu_title">thể thao</a>
+                    <ul class="menu_child">
+                        <li><a href="#">bóng đá</a></li>
+                        <li><a href="#">lịch thi đấu</a></li>
+                        <li><a href="#">tennis</a></li>
+                        <li><a href="#">v-race</a></li>
+                        <li><a href="#">các môn khác</a></li>
+                    </ul>    
+                </li>
+                <li>
+                    <a href = "GiaiTri.html" class="menu_title">giải trí</a>
+                    <ul class="menu_child">
+                        <li><a href="#">phim</a></li>
+                        <li><a href="#">truyền hình</a></li>
+                        <li><a href="#">đời nghệ sĩ</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "CongNghe.html" class="menu_title">công nghệ</a>
+                    <ul class="menu_child">
+                        <li><a href="#">sản phẩm mới</a></li>
+                        <li><a href="#">thủ thuật</a></li>
+                        <li><a href="#">esports</a></li>
+                        <li><a href="#">xu hướng</a></li>
+                        <li><a href="#">tin tức</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "PhapLuat.html" class="menu_title">pháp luật</a>
+                    <ul class="menu_child">
+                        <li><a href="#">hồ sơ phá án</a></li>
+                        <li><a href="#">tư vấn</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "SucKhoe.html" class="menu_title">sức khỏe</a>
+                    <ul class="menu_child">
+                        <li><a href="#">làm đẹp</a></li>
+                        <li><a href="#">giới tính</a></li>
+                        <li><a href="#">khỏe đẹp mỗi ngày</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "TamSu.html" class="menu_title">tâm sự</a>
+                    <ul class="menu_child">
+                        <li><a href="#">chuyên gia gỡ rối</a></li>
+                        <li><a href="#">hẹn hò</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">đời sống</a>
+                    <ul class="menu_child">
+                        <li><a href="#">người sống quanh ta</a></li>
+                        <li><a href="#">gia đình</a></li>
+                        <li><a href="#">ẩm thực</a></li>
+                        <li><a href="#">du lịch</a></li>
+                        <li><a href="#">cộng đồng</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">xe</a>
+                    <ul class="menu_child">
+                        <li><a href="#">thị trường xe</a></li>
+                        <li><a href="#">tư vấn xe</a></li>
+                        <li><a href="#">diễn đàn xe</a></li>
+                        <li><a href="#">đánh giá xe</a></li>
+                        <li><a href="#">khám phá xe</a></li>
+                        <li><a href="#">video</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">khoa học</a>
+                    <ul class="menu_child">
+                        <li><a href="#">trong nước</a></li>
+                        <li><a href="#">tin tức</a></li>
+                        <li><a href="#">phát minh</a></li>
+                        <li><a href="#">ứng dụng</a></li>
+                        <li><a href="#">thường thức</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">video</a>
+                    <ul class="menu_child">
+                        <li><a href="#">thời sự</a></li>
+                        <li><a href="#">phóng sự</a></li>
+                        <li><a href="#">giải trí</a></li>
+                        <li><a href="#">món ngon</a></li>
+                        <li><a href="#">thể thao</a></li>
+                        <li><a href="#">thế giới</a></li>
+                        <li><a href="#">trực tuyến</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">việc làm</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Login-->
+        <div class="login">
+            <div class="toggle_login"><i class="fas fa-user"></i></div>
+
+            <!--head-->
+            <div class="login_head">
+                <a href="index.html" title="VNNEWS Online" class="logo">VNNEWS</a>
+            </div>
+
+            <!--Content-->
+            <div class="login_content">
+                <div class="login_text">Đăng ký / Đăng nhập với Vnnews.vn</div>
+
+                <!--Login với liên kết mxh-->
+                <div class="login_social">
+                    <a href="#" class="social social-fb">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Đăng nhập bằng facebook</span>
+                    </a>
+                    <a href="#" class="social social-gg">
+                        <i class="fab fa-google"></i>
+                        <span>Đăng nhập bằng Google</span>
+                    </a>
+                    <a href="#" class="social social-tw">
+                        <i class="fab fa-twitter"></i>
+                        <span>Đăng nhập bằng Twitter</span>
+                    </a>
+                </div>
+
+                <!--Ngăn cách-->
+                <h4 class="login_subhead">
+                    <span>Hoặc</span>
+                </h4>
+
+                <!--Login Email-->
+                <div class="login_email">
+                    <div class="form">
+                        <label>Nhập địa chỉ Email</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <a class="btn inactive" href="#">Tiếp tục</a>
+                    <a href="#" class="user-policy">Quy định sử dụng tài khoản</a>
+                    <a href="#" class="forget-password">Quên mật khẩu</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Banner-->
+        <section class = "banner">
+            <div class = "banner-main-content">
+                <h2>TIN TỨC CÔNG NGHỆ MỚI NHẤT THẾ GIỚI</h2>
+                <h3>Cổng thông tin công nghệ hàng đầu thế giới</h3>
+
+                <button>
+                    <a href = "#">Xem Thêm</a>
+                </button>
+
+                <div class = "current-news-head">
+                    <h3>Apple Glasses: Những gì chúng tôi mong đợi, những gì chúng tôi nghĩ <span>scott stein</span></h3>
+
+                    <h3>Cảm giác như thế nào khi có số điện thoại cũ của Elon Musk? <span>abrar al-heeti</span></h3>
+
+                    <h3>Xem chính xác khoảnh khắc Chris Pratt vô tình xóa 51.000 emials <span>goel fashingbauer</span></h3>
+
+                    <h3>Richard Branson sẽ phóng một tên lửa từ giữa không trung vào Chủ nhật <span>eric mack</span></h3>
+                </div>
+            </div>
+
+            <!--Slideshow ảnh-->
+            <div class="sliders">
+                <div class="slides">
+                  <!--radio buttons start-->
+                  <input type="radio" name="radio-btn" id="radio1">
+                  <input type="radio" name="radio-btn" id="radio2">
+                  <input type="radio" name="radio-btn" id="radio3">
+                  <input type="radio" name="radio-btn" id="radio4"> <!--radio buttons end-->
+                 
+                  <!--slide images start-->
+                <div class="slide first">
+                    <div class = "banner-sub-content">
+                        <div class = "hot-topic">
+                            <img src = "images/sun.PNG" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Sự thật về bức ảnh từ trường Mặt Trời đang lan truyền trên mạng xã hội</h2>
+                    
+                                <h3>Công nghệ</h3>
+                                <p>Bức ảnh được nhiều trang Facebook chia sẻ với mô tả "rõ nhất về Mặt Trời", dẫn nguồn từ NASA thực chất thuộc về một nhiếp ảnh gia tại Mỹ.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    
+                        <div class = "hot-topic">
+                            <img src = "images/elon-musk.jpg" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Elon Musk đang tạo ra thương vụ chưa từng có tiền lệ</h2>
+                    
+                                <h3>Công nghệ</h3>
+                                <p>So với những thương vụ kịch tính trong lịch sử, diễn biến thỏa thuận mua lại Twitter của tỷ phú Elon Musk khiến các bên bối rối.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    
+                        <div class = "hot-topic">
+                            <img src = "images/ukraina.jpg" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Ukraine áp lệnh giới nghiêm ở biên giới với Belarus</h2>
+                    
+                                <h3>Thời sự</h3>
+                                <p>Giới chức Ukraine thắt chặt kiểm soát, nghiêm cấm dân thường vào khu vực biên giới với Belarus, khi căng thẳng song phương gia tăng.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    
+                        <div class = "hot-topic">
+                            <img src = "images/daibieu.jpg" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Đề xuất xây dựng Luật Bảo vệ người dám nghĩ, dám làm</h2>
+                    
+                                <h3>Thời sự</h3>
+                                <p>Đại biểu Nguyễn Văn Cảnh đề nghị Quốc hội nghiên cứu, xây dựng Luật Bảo vệ người dám nghĩ, dám làm để tạo đột phá tăng trưởng cho đất nước. </p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--SLide 2-->
+                <div class="slide">
+                    <div class = "banner-sub-content">
+                        <div class = "hot-topic">
+                            <img src = "images/Amber.jpg" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Amber Heard mất khoảng 50 triệu USD vì kiện tụng</h2>
+                    
+                                <h3>Giải trí</h3>
+                                <p>Chuyên gia nói Amber Heard tổn thất 45 đến 50 triệu USD sau khi Johnny Depp cáo buộc cô bịa chuyện bị bạo hành.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    
+                        <div class = "hot-topic">
+                            <img src = "images/kn.JPG" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Lễ cưới diễn viên Khương Ngọc chỉ có 20 người dự</h2>
+                    
+                                <h3>Giải trí</h3>
+                                <p>"Tôi vui khi thực hiện mong ước tổ chức lễ cưới trên bãi biển của vợ. Đó cũng là món quà vô giá dành cho con", diễn viên Khương Ngọc chia sẻ.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    
+                        <div class = "hot-topic">
+                            <img src = "images/anthony.jpg" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Thách thức chờ đón tân Thủ tướng Australia</h2>
+                    
+                                <h3>Thế giới</h3>
+                                <p>Ông Anthony Albanese sẽ đối mặt với nhiều thách thức lớn sau khi nhậm chức Thủ tướng Australia, từ quan hệ với Trung Quốc, lạm phát đến biến đổi khí hậu.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    
+                        <div class = "hot-topic">
+                            <img src = "images/putin.JPG" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Ông Putin nói Nga 'chống đỡ tốt đòn trừng phạt'</h2>
+                    
+                                <h3>Thế giới</h3>
+                                <p>Tổng thống Vladimir Putin tuyên bố nền kinh tế Nga đã "chống đỡ tốt" trước làn sóng trừng phạt chưa từng có từ phương Tây.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--SLide 3-->
+                <div class="slide">
+                    <div class = "banner-sub-content">
+                        <div class = "hot-topic">
+                            <img src = "images/seagame.JPG" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Đồng lòng hô vang, Việt Nam dẫn đầu chuỗi thắng vàng tại SEA Games 31</h2>
+                    
+                                <h3>Thể thao</h3>
+                                <p>SEA Games 31 đã khép lại đầy mỹ mãn cho thể thao Việt Nam với kỷ lục 205 HCV chung cuộc, trong khi 2 nội dung bóng đá nam và nữ bảo vệ thành công ngôi vương.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    
+                        <div class = "hot-topic">
+                            <img src = "images/mbapple.jpeg" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Sai lầm chiến lược khiến Real không chiêu mộ được Mbappe</h2>
+                    
+                                <h3>Thể thao</h3>
+                                <p>"Hôm nay, tôi xin thông báo đã quyết định gia hạn hợp đồng với PSG", tuyên bố ngắn gọn của Kylian Mbappe trên trang cá nhân chấm dứt mọi tin đồn tới Real Madrid.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    
+                        <div class = "hot-topic">
+                            <img src = "images/larry.jpg" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Kẻ bạo dâm đóng vai tài xế tốt bụng cho đi nhờ xe</h2>
+                    
+                                <h3>Pháp luật</h3>
+                                <p>Larry Eyler là một trong những tên sát nhân hàng loạt tồi tệ nhất trong lịch sử với xu hướng chọn nạn nhân là người đồng tính trẻ dễ bị tổn thương.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    
+                        <div class = "hot-topic">
+                            <img src = "images/ph.jpg" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Công an Bình Dương kiến nghị chuyển vụ án bà Nguyễn Phương Hằng cho TP HCM</h2>
+                    
+                                <h3>Pháp luật</h3>
+                                <p>Cho rằng hành vi của bà Nguyễn Phương Hằng có dấu hiệu tội phạm như vụ án Công an TP HCM đang điều tra, Công an Bình Dương kiến nghị nhập vụ án.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Slide 4 End-->
+                <div class="slide">
+                    <div class = "banner-sub-content">
+                        <div class = "hot-topic">
+                            <img src = "images/pull.JPG" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Nguyên nhân dẫn đến chấn thương xương khớp trong thể thao</h2>
+                    
+                                <h3>Sức khỏe</h3>
+                                <p>Tập luyện quá sức, tập sai kỹ thuật, bỏ qua bước khởi động, cơ thể thiếu canxi, glucosamine đều là những nguyên nhân có thể dẫn đến chấn thương xương khớp trong thể thao.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    
+                        <div class = "hot-topic">
+                            <img src = "images/food.JPG" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Sai lầm khi giảm cân với chế độ ăn quá nhiều thịt đỏ</h2>
+                    
+                                <h3>Sức khỏe</h3>
+                                <p>Dù protein có tác dụng lớn trong việc phát triển cơ bắp, việc nạp quá nhiều thịt trong khẩu phần ăn trong khi cắt giảm carb, chất béo lại gây ra những ảnh hưởng xấu.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    
+                        <div class = "hot-topic">
+                            <img src = "images/travel.jpg" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>SEA Games 31 đem đến cơ hội mới cho du lịch nhiều tỉnh thành</h2>
+                    
+                                <h3>Du lich & Ẩm thực</h3>
+                                <p>Các địa phương đón hàng trăm nghìn lượt khách dịp SEA Games, trong đó có nhiều nhóm khách mới, hình ảnh về điểm đến được đánh giá cao.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    
+                        <div class = "hot-topic">
+                            <img src = "images/chua.jpg" alt = "">
+                    
+                            <div class = "hot-topic-content">
+                                <h2>Chùa 700 tuổi trên vách núi dựng đứng</h2>
+                    
+                                <h3>Du lich & Ẩm thực</h3>
+                                <p>Ngôi chùa treo Đại Từ Nham Tự gắn vào vách đá bằng những cột gỗ, che chắn bớt mưa gió.</p>
+                                <a href = "#">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                  <!--automatic navigation start-->
+                  <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <!--automatic navigation end-->
+                  </div>
+                </div>
+                
+                <!--manual navigation start-->
+                <div class="navigation-manual">
+                  <label for="radio1" class="manual-btn"></label>
+                  <label for="radio2" class="manual-btn"></label>
+                  <label for="radio3" class="manual-btn"></label>
+                  <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+    </section>
+
+        <hr>
+        
+        <main>
+            <section class = "main-container-left">
+                <h2>Tin tổng hợp</h2>
+
+                <div class="sliderss">
+                    <div class="slidess">
+                      <!--radio buttons start-->
+                      <input type="radio" name="radio-btnn" id="radio5">
+                      <input type="radio" name="radio-btnn" id="radio6">
+                      <input type="radio" name="radio-btnn" id="radio7">
+                      <input type="radio" name="radio-btnn" id="radio8">
+                      <!--radio buttons end-->
+                      <!--slide images start-->
+                      <div class="slidee firstt">
+                        <div class = "container-top-left">
+                            <article>
+                                <img src = "images/chu-ngo-c-anh-3587-1654578555.jpg">
+                
+                                <div>
+                                    <h3>Chủ tịch TP Hà Nội Chu Ngọc Anh bị bãi nhiệm</h3>
+                
+                                    <p>Chiều 7/6, 100% đại biểu HĐND TP Hà Nội có mặt nhất trí thông qua việc bãi nhiệm chức danh Chủ tịch UBND thành phố đối với ông Chu Ngọc Anh.</p>
+                
+                                    <a href = "#">Xem Thêm <span>>></span></a>
+                                </div>
+                            </article>
+                        </div>
+                      </div>
+                      <div class="slidee">
+                        <div class = "container-top-left">
+                            <article>
+                                <img src = "images/tuong-nga-tu-tran-jpeg-1706-1654594248.jpg">
+                
+                                <div>
+                                    <h3>Phe ly khai xác nhận tướng Nga tử trận ở đông Ukraine</h3>
+                
+                                    <p>Thủ lĩnh phe ly khai thân Nga xác nhận thiếu tướng Roman Kutuzov đã tử trận khi chỉ huy một cuộc tấn công ở vùng Donbass, miền đông Ukraine.</p>
+                
+                                    <a href = "#">Xem Thêm <span>>></span></a>
+                                </div>
+                            </article>
+                        </div>
+                      </div>
+                      <div class="slidee">
+                        <div class = "container-top-left">
+                            <article>
+                                <img src = "images/LDP.jpg">
+                
+                                <div>
+                                    <h3>Lý do 'Mộng hoa lục' của Lưu Diệc Phi gây tiếng vang</h3>
+                
+                                    <p>"Mộng hoa lục", phim do Lưu Diệc Phi đóng chính, được khen khi truyền tải thông điệp "phụ nữ như nước".</p>
+                
+                                    <a href = "#">Xem Thêm <span>>></span></a>
+                                </div>
+                            </article>
+                        </div>
+                      </div>
+                      <div class="slidee">
+                        <div class = "container-top-left">
+                            <article>
+                                <img src = "images/ung-thu-1654586852-9608-1654586918.png">
+                
+                                <div>
+                                    <h3>Khỏi ung thư trực tràng nhờ liệu pháp mới</h3>
+                
+                                    <p>Sascha Roth cùng 17 bệnh nhân khác đã được chữa khỏi ung thư trực tràng bằng một liệu trình thuốc kéo dài 6 tháng.</p>
+                
+                                    <a href = "#">Xem Thêm <span>>></span></a>
+                                </div>
+                            </article>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--manual navigation start-->
+                    <div class="navigation-manuall">
+                      <label for="radio5" class="manual-btnn"></label>
+                      <label for="radio6" class="manual-btnn"></label>
+                      <label for="radio7" class="manual-btnn"></label>
+                      <label for="radio8" class="manual-btnn"></label>
+                    </div>
+                    <!--manual navigation end-->
+                </div>
+
+                <div class = "container-bottom-left">
+                    <article>
+                        <img src = "images/bottom-left-1.jpg">
+                        <div>
+                            <h3>Loa thông minh tốt nhất trong năm</h3>
+                            <p>Loa thông minh tốt nhất là một trong những thiết bị linh hoạt nhất mà bạn có thể sở hữu.</p>
+
+                            <a href = "#">Xem Thêm <span>>></span></a>
+                        </div>
+                    </article>
+
+                    <article>
+                        <img src = "images/bottom-left-2.jpg">
+                        <div>
+                            <h3>iPad Pro, được đánh giá: iPad đã trở thành máy chính của tôi bây giờ chưa?</h3>
+                            <p>Vào năm 2011, khi được hỏi về việc liệu ông có nghĩ iPad sẽ vượt qua MacBook để trở thành máy tính cá nhân được người bình thường lựa chọn hay không</p>
+
+                            <a href = "#">Xem Thêm <span>>></span></a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class = "main-container-right">
+                <h2><a href="TheThao.html">Thể thao</a></h2>
+                
+                <article>
+                    <h4>Tin nóng</h4>
+                    <div>
+                        <h2>HLV Gong: 'Việt Nam đã quên SEA Games 31'</h2>
+
+                        <p>Theo HLV Gong Oh-kyun, các cầu thủ Việt Nam đã gác lại thành công ở SEA Games 31 để tập trung cho trận ra quân gặp Thái Lan ở giải U23 châu Á 2022.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/HLV.jpg">
+                </article>
+
+                <article>
+                    <h4>Tin nóng</h4>
+                    <div>
+                        <h2>Nadal - Djokovic là trận đấu lớn nhất lịch sử</h2>
+
+                        <p>Trận tứ kết Roland Garros giữa Rafael Nadal và Novak Djokovic là cuộc đấu của hai người có bộ sưu tập danh hiệu đồ sộ nhất, với 41 Grand Slam.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/djo.jpg">
+                </article>
+
+                <h2><a href="#">Khoa học</a></h2>
+
+                <article>
+                    <h4>Tin nóng</h4>
+                    <div>
+                        <h2>Thủ phạm khiến quái vật biển megalodon tuyệt chủng</h2>
+
+                        <p>Cá mập quái vật megalodon với chiều dài 20 m có thể chịu sự cạnh tranh con mồi từ cá mập trắng nhỏ hơn, dẫn tới tuyệt chủng. </p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/shark.jpg">
+                </article>
+
+                <article>
+                    <h4>Tin nóng</h4>
+                    <div>
+                        <h2>Những tàu vũ trụ chở người thành công nhất lịch sử</h2>
+
+                        <p>Hàng thập kỷ sau chuyến tàu chở người đầu tiên của Liên Xô, nhiều mẫu tàu trên thế giới ra đời với sức chở lớn và trang bị hiện đại.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/galaxy.jpg">
+                    
+                </article>
+
+                <h2><a href="#">Đời sống</a></h2>
+
+                <article>
+                    <h4>Tin nóng</h4>
+                    <div>
+                        <h2>Mẹo để trẻ tránh xa ổ cắm điện</h2>
+
+                        <p>Sự tò mò khiến trẻ lại gần ổ điện và dí tay vào đó để khám phá, gây ra các hậu quả nghiêm trọng, có thể ảnh hưởng tới tính mạng.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/baby.jpg">
+                </article>
+
+                <article>
+                    <h4>Tin nóng</h4>
+                    <div>
+                        <h2>Tại sao người giàu phải xếp hàng mua đồ hiệu?</h2>
+
+                        <p>Nạn cướp cửa hàng đồ hiệu ở nước Mỹ có thể là nguyên nhân khiến đơn vị bán hàng phải kiểm soát chặt lượng khách ra vào.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/rich.png">
+                </article>
+
+                <h2><a href="GiaiTri.html">Giải trí</a></h2>
+                
+                <article>
+                    <h4>Tin nóng</h4>
+                    <div>
+                        <h2>H'Hen Niê tặng giếng cho người dân</h2>
+
+                        <p>Hoa hậu H'Hen Niê cùng các nhà hảo tâm tặng nhiều giếng nước sạch cho người Gia Rai, xã Ia Phí, huyện Chư Păh.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/Hen.jpg">
+                </article>
+
+                <article>
+                    <h4>Tin nóng</h4>
+                    <div>
+                        <h2>Hòa Minzy chuộng đầm công chúa</h2>
+
+                        <p>Ca sĩ Hòa Minzy thường chọn các mẫu đầm cúp ngực, đính hoa, nơ theo phong cách công chúa ở tuổi 27.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/minzy.jpg">
+                </article>
+
+                <h2><a href="SucKhoe.html">Sức khỏe</a></h2>
+
+                <article>
+                    <h4>Tin nóng</h4>
+                    <div>
+                        <h2>Bệnh sốt rét 'nhập khẩu' từ châu Phi</h2>
+
+                        <p>Trung tâm Bệnh nhiệt đới, Bệnh viện Bạch Mai đang điều trị hai bệnh nhân sốt rét đều trở về từ Angola (châu Phi).</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/sot.jpg">
+                </article>
+
+                <article>
+                    <h4>Tin nóng</h4>
+                    <div>
+                        <h2>Cách phân biệt loét miệng và bệnh tay chân miệng</h2>
+
+                        <p>Viêm loét miệng và tay chân miệng đều xuất hiện các vết loét đỏ tổn thương ở miệng nhưng vết loét miệng thường không ở dạng phỏng nước.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/nhiet.png">
+                </article>
+
+                <h2><a href="PhapLuat.html">Pháp luật</a></h2>
+
+                <article>
+                    <h4>Tin nóng</h4>
+                    <div>
+                        <h2>Phạm nhân 'vượt ngục' Triệu Quân Sự bị bắt</h2>
+
+                        <p>Gần 15h hôm nay, Triệu Quân Sự, phạm nhân mang án chung thân, bị bắt tại xã Yên Dương, huyện Hà Trung, sau gần một ngày trốn khỏi trại giam quân đội T-974.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/tqs.jpg">
+                </article>
+
+                <article>
+                    <h4>Tin nóng</h4>
+                    <div>
+                        <h2>Âm mưu 'giật dây' của người đàn bà chán chồng</h2>
+
+                        <p>Pamela Smart ép người tình 16 tuổi và dụ dỗ ba thiếu niên khác tham gia sát hại chồng với giá 500 USD, chỉ một năm sau ngày cưới.</p>
+
+                        <a href = "#">Xem Thêm <span>>></span></a>
+                    </div>
+                    <img src = "images/pamela.jpg">
+                </article>
+
+            </section>
+        </main>
+
+        <footer>
+            <div class = "footer-container">
+                <div class = "footer-left">
+                    <h2><a href="#">VNNEWS</a></h2>
+                    <p> <b>Giấy phép xuất bản số 110/GP - BTTTT cấp ngày 24.3.2020</b><br>
+                        © 2003-2022 Bản quyền thuộc về Báo Thanh Niên.<br>Cấm sao chép dưới mọi hình thức nếu không có sự chấp thuận bằng văn bản.<br>
+                    </p>
+                </div>
+
+                <div class = "footer-right">
+                    <h2>Liên hệ với chúng tôi</h2>
+                    <p>082.233.3555</p>
+                    <div>
+                        <input type = "text" placeholder = "Địa chỉ Email">
+                        <i class = "fas fa-envelope"></i>
+                    </div>
+                </div>
+
+                <div class = "footer-between">
+                    <h2>Theo dõi VnNews trên</h2>
+                    <!--social icons -->
+                    <div class = "social-icons">
+                    <ul>
+                        <li>
+                            <a href= "#"><i class = "fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href= "#"><i class = "fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href= "#"><i class = "fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+
+            <p>Copyright &copy; 1997-2022. Toàn bộ bản quyền thuộc VnNews</p>
+        </footer>
+
+        <script src="script.js" async defer></script>
+        
+        <!--Nút back top-->
+        <div id="backtop">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+
+    </body>
+</html>

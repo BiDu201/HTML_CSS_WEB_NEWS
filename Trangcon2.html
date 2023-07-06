@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+ <html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--Logo title-->
+        <link rel="icon" href="images/LOGOVN.jpg">
+        <title>TrangCon</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--viewport:kích thước hiển thị của giao diện | device:thiết bị sử dụng-->
+        <link rel="stylesheet" href="main.css">
+        <!--Backtop-->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>     
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>    
+    </head>
+    <body>
+
+        <!-- header -->
+        <header>
+            <div class = "navigation-container">
+                <div class = "top-head">
+                    <div class = "web-name">
+                        <h1>VNNEWS</h1>
+                    </div>
+
+                    <div class = "ham-btn">
+                        <span>
+                            <i class = "fas fa-bars"></i>
+                        </span>
+                    </div>
+
+                    <div class = "times-btn">
+                        <span>
+                            <i class = "fas fa-times"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- nav bar -->
+
+                <div class = "nav-bar" id = "nav-bar">
+                    <nav>
+                        <ul>
+                            <li><a href = "#">thời sự</a></li>
+                            <li><a href = "#">thế giới</a></li>
+                            <li><a href = "#">thể thao</a></li>
+                            <li><a href = "#">giải trí</a></li>
+                            <li><a href = "#">công nghệ</a></li>
+                            <li><a href = "#">pháp luật</a></li>
+                            <li><a href = "#">sức khỏe</a></li>
+                            <li><a href = "#">tâm sự</a></li>
+                        </ul>
+                    </nav>
+                    <!--nut darkmode-->
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!--Thanh tìm kiếm-->
+                    <div class="search-box">
+                        <input class="search-txt" type="text" placeholder="Tìm kiếm">
+                            <a class="search-btn">
+                                 <i class="fas fa-search"></i>
+                            </a>
+                    </div>
+        </header>
+                
+        <!--menu-->
+        <div class="menu">
+            <div class="toggle_menu"><i class="fas fa-bars"></i></div>
+            <ul class="menu_nav">
+                <li>
+                    <a href = "#" class="menu_title">thời sự</a>
+                    <ul class="menu_child">
+                        <li><a href="#">chính trị</a></li>
+                        <li><a href="#">dân sinh</a></li>
+                        <li><a href="#">lao động - việc làm</a></li>
+                        <li><a href="#">giao thông</a></li>
+                    </ul>           
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">thế giới</a>
+                    <ul class="menu_child">
+                        <li><a href="#">kinh tế</a></li>
+                        <li><a href="#">quân sự</a></li>
+                        <li><a href="#">tư liệu</a></li>
+                        <li><a href="#">cuộc sống đó đây</a></li>
+                    </ul>    
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">thể thao</a>
+                    <ul class="menu_child">
+                        <li><a href="#">bóng đá</a></li>
+                        <li><a href="#">lịch thi đấu</a></li>
+                        <li><a href="#">tennis</a></li>
+                        <li><a href="#">v-race</a></li>
+                        <li><a href="#">các môn khác</a></li>
+                    </ul>    
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">giải trí</a>
+                    <ul class="menu_child">
+                        <li><a href="#">phim</a></li>
+                        <li><a href="#">truyền hình</a></li>
+                        <li><a href="#">đời nghệ sĩ</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">công nghệ</a>
+                    <ul class="menu_child">
+                        <li><a href="#">sản phẩm mới</a></li>
+                        <li><a href="#">thủ thuật</a></li>
+                        <li><a href="#">esports</a></li>
+                        <li><a href="#">xu hướng</a></li>
+                        <li><a href="#">tin tức</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">pháp luật</a>
+                    <ul class="menu_child">
+                        <li><a href="#">hồ sơ phá án</a></li>
+                        <li><a href="#">tư vấn</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">sức khỏe</a>
+                    <ul class="menu_child">
+                        <li><a href="#">làm đẹp</a></li>
+                        <li><a href="#">giới tính</a></li>
+                        <li><a href="#">khỏe đẹp mỗi ngày</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">tâm sự</a>
+                    <ul class="menu_child">
+                        <li><a href="#">chuyên gia gỡ rối</a></li>
+                        <li><a href="#">hẹn hò</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">đời sống</a>
+                    <ul class="menu_child">
+                        <li><a href="#">người sống quanh ta</a></li>
+                        <li><a href="#">gia đình</a></li>
+                        <li><a href="#">ẩm thực</a></li>
+                        <li><a href="#">du lịch</a></li>
+                        <li><a href="#">cộng đồng</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">xe</a>
+                    <ul class="menu_child">
+                        <li><a href="#">thị trường xe</a></li>
+                        <li><a href="#">tư vấn xe</a></li>
+                        <li><a href="#">diễn đàn xe</a></li>
+                        <li><a href="#">đánh giá xe</a></li>
+                        <li><a href="#">khám phá xe</a></li>
+                        <li><a href="#">video</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">khoa học</a>
+                    <ul class="menu_child">
+                        <li><a href="#">trong nước</a></li>
+                        <li><a href="#">tin tức</a></li>
+                        <li><a href="#">phát minh</a></li>
+                        <li><a href="#">ứng dụng</a></li>
+                        <li><a href="#">thường thức</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">video</a>
+                    <ul class="menu_child">
+                        <li><a href="#">thời sự</a></li>
+                        <li><a href="#">phóng sự</a></li>
+                        <li><a href="#">giải trí</a></li>
+                        <li><a href="#">món ngon</a></li>
+                        <li><a href="#">thể thao</a></li>
+                        <li><a href="#">thế giới</a></li>
+                        <li><a href="#">trực tuyến</a></li>
+                    </ul>  
+                </li>
+                <li>
+                    <a href = "#" class="menu_title">việc làm</a>
+                </li>
+            </ul>
+        </div>
+
+        
+        
+        <hr>
+        
+        <main>
+            <div style="margin-left:20px; width:1400px; height:auto; border:0px solid; margin-left:50px;">
+                <div style="width:900px;"><span class="date" style="float:right">Thứ tư, 6/6/2021, 12:16 (GMT+7)</span></div>
+                
+                <ul class="breadcrumb" data-campaign="Header" style="color:black">
+
+                    <li><a data-medium="Menu-KhoaHoc" href="/khoa-hoc" title="Khoa học" style=" background-color:black; height:auto; ">Khoa học</a></li>
+                    <li><a data-medium="Menu-TinTuc" href="/khoa-hoc/tin-tuc" title=" Tin tức" style="background-color: black; height: auto; border-left: 10px solid;"> Tin tức</a></li>
+
+                </ul>
+                <h1 class="title-detail">Thủ phạm khiến quái vật biển megalodon tuyệt chủng</h1>
+                <p class="description">Cá mập quái vật megalodon với chiều dài 20 m có thể chịu sự cạnh tranh con mồi từ cá mập trắng nhỏ hơn, dẫn tới tuyệt chủng.</p>
+                <img itemprop="contentUrl" style="position: absolute;width:60%;left:0; margin-left:50px; " alt="Megalodon là quái vật săn mồi đầu bảng ở đại dương cổ đại. Ảnh: iStock" class="lazy" src="images/camap.jpg">
+                <article class="fck_detail ">
+                    <figure data-size="true" itemprop="associatedMedia image" itemscope="" itemtype="http://schema.org/ImageObject" class="tplCaption" >
+                        <meta itemprop="url" content="https://i1-vnexpress.vnecdn.net/2022/06/01/Capture-JPG-4386-1654058210.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=I1suPjB01KJTcCPzkq02fA" >
+                        <div class="card" style="width: 18rem; float:right; margin-right:100px;">
+                            <img src="images/quangcao.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Những cột đá nhọn kỳ lạ trên sao Hỏa</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="https://vnexpress.net/tau-cho-khi-dot-122-000-tan-tu-lai-qua-thai-binh-duong-4472488" class="btn btn-primary">Tàu chở khí đốt 122.000 tấn tự lái qua Thái Bình Dương </a>
+                            </div>
+                        </div>
+                        <meta itemprop="width" content="750">
+                        <meta itemprop="height" content="450">
+                        <meta itemprop="href" content="">
+                        
+                        <div class="fig-picture" style="padding-bottom: 40%;position: relative;"> </div>
+                        
+                    </figure>
+                   
+                </article>
+                <p class="Normal">Megalodon là loài cá mập khổng lồ sống cách đây 23 triệu năm và lớn gấp 4 lần cá mập trắng ngày nay. Tuy nhiên, khi cùng tồn tại, hai loài cá mập này nhiều khả năng săn cùng loại con mồi. Sự cạnh tranh này có thể là nguyên nhân cá mập megalodon dài 20 m trở nên tuyệt chủng, theo kết quả nghiên cứu mới công bố trên tạp chí <em>Nature Communications </em>ngày 1/6.</p><p class="Normal">Để rút ra kết luận, nhóm nghiên cứu sử dụng một kỹ thuật mới. Họ phân tích dấu vết chế độ ăn trong răng của 13 loài cá mập đã tuyệt chủng và 20 loài cá mập hiện đại để tìm hiểu chúng nằm ở đâu trong chuỗi thức ăn.</p><p class="Normal">"Megalodon thường được mô tả như quái vật cá mập ngoại cỡ trong các bộ phim, nhưng trên thực tế, chúng ta biết rất ít về loài cá mập đã tuyệt chủng này", Kenshu Shimada, giáo sư cổ sinh vật học ở Bảo tàng lịch sử tự nhiên Sternberg tại Kansas, đồng tác giả nghiên cứu, cho biết. "Nghiên cứu mới của chúng tôi cho thấy chế độ ăn của cá mập trắng đầu thế Thượng Tân rất giống megalodon".</p><p class="Normal">Shimada và cộng sự có thể tìm ra thông tin trên bằng cách xem xét sự tồn tại của những đồng vị khác nhau của nguyên tố kẽm còn lưu lại ở men răng cá mập. Kẽm rất cần thiết đối với tổ chức sinh vật sống, đóng vai trò quan trọng trong phát triển xương. Tỷ lệ đồng vị nặng và nhẹ của kẽm ở răng tiết lộ loại con mồi mà cá mập ăn.</p><p class="Normal">Đồng vị kẽm có thể được sử dụng như một chất chỉ thị sinh thái do tỷ lệ hai đồng vị khác nhau thay đổi dọc theo chuỗi thức ăn, theo đồng tác giả nghiên cứu Michael Griffiths, nhà địa hóa chất kiêm giáo sư ở Khoa khoa học môi trường tại Đại học William Paterson, New Jersey.</p><p class="Normal">Ví dụ, nếu megalodon ăn thịt cá mập trắng, vị trí cao hơn của chúng trong chuỗi thức ăn sẽ được phản ánh ở tỷ lệ đồng vị. Nhưng nghiên cứu phát hiện hai loại cá mập có sự trùng lặp, chứng tỏ chúng săn cùng loài con mồi. Tuy nhiên, nhóm nghiên cứu không loại trừ khả năng megalodon săn cá mập trắng.</p><p class="Normal">Ăn cùng loại con mồi không hẳn thể hiện sự cạnh tranh trực tiếp giữa megalodon và cá mập trắng. Tuy nhiên, ít nhất hai loài chắc chắn có sự trùng lặp về thức ăn. Với kích thước nhỏ hơn, cá mập trắng không đòi hỏi nhiều thức ăn như megalodon. Vì vậy, chúng sẽ có lợi thế cạnh tranh khi săn cùng con mồi, Griffiths cho biết. Theo nhóm nghiên cứu, kỹ thuật sử dụng đồng vị kẽm có thể ứng dụng cho nhiều động vật đã tuyệt chủng khác nhằm tìm hiểu chế độ ăn và sinh thái của chúng.</p><p align="right" class="Normal"><strong>An Khang</strong> (Theo <em>CNN</em>)</p>
+                <div class="list_link" contenteditable="false" data-component="true" data-component-type="list_link" data-component-value="4382143" data-widget="obj" style="cursor:pointer">
+                    <ul class="list-news hidden" data-campaign="Box-Related">
+                        <li data-id="4382143">
+                            <hr /> <br />
+                            <a data-medium="Item-1" href="https://vnexpress.net/phat-hien-bo-ham-khong-lo-cua-quai-vat-megalodon-4382143.html" title="Phát hiện bộ hàm khổng lồ của quái vật Megalodon" style="color:blue">Phát hiện bộ hàm khổng lồ của quái vật Megalodon</a><span class="meta-news">
+                                <span class="txt_num_comment font_icon" data-type="comment" data-objecttype="1" data-objectid="4382143"></span>
+                             
+                            </span>
+                        </li>
+                    </ul>
+                    <hr />
+                    
+                        <a title="Ý kiến" href="/y-kien" data-medium="Menu-YKien" style="color:black; border:1px solid; width:7%; text-align:center">
+                            Ý kiến (17)
+                        </a>
+                    <a href="#" style="color:blue">Xem thêm</a>
+                    <center>
+                        <a title="Ý kiến"  data-medium="Menu-YKien" style="color:black; border:1px solid; width:20%; text-align:center; margin-top:10px; background-color:blue">
+                            Đăng nhập để bình luận
+                        </a>
+                        
+                            <form class="row g-3" >
+                                <div class="col-md-6" style="width:200px">
+
+                                    <label for="inputEmail4" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4">
+                                </div>
+
+                                <div class="col-md-6" style="width:200px">
+                                    
+                                    <label for="inputPassword4" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword4">
+                                </div>
+                                <div class="col-12" style="width:200px">
+                                    <label for="inputAddress" class="form-label">Tên</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="Tên">
+                                </div>
+                                <div class="col-12" style="width:200px">
+                                    <label for="inputAddress2" class="form-label">Nick name</label>
+                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Nick name">
+                                </div>
+                                <div class="col-md-6" style="width:200px">
+                                    <label for="inputCity" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                </div>
+                                <div class="col-md-4" style="width:200px">
+                                    <label for="inputState" class="form-label">State</label>
+                                    <select id="inputState" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2" style="width:200px">
+                                    <label for="inputZip" class="form-label">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                </div>
+                                <div class="col-12" style="width:200px" >
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Check me out
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Sign in</button>
+                                </div>
+                            </form>
+                       
+                    </center>
+
+
+                   
+
+
+
+
+
+                    </div>
+
+
+                </div>
+
+
+</main>
+
+        <footer>
+            <div class = "footer-container">
+                <div class = "footer-left">
+                    <h2><a href="#">VNNEWS</a></h2>
+                    <p> <b>Giấy phép xuất bản số 110/GP - BTTTT cấp ngày 24.3.2020</b><br>
+                        © 2003-2022 Bản quyền thuộc về Báo Thanh Niên.<br>Cấm sao chép dưới mọi hình thức nếu không có sự chấp thuận bằng văn bản.<br>
+                        </p>
+                </div>
+
+                <div class = "footer-right">
+                    <h2>Liên hệ với chúng tôi</h2>
+                    <p>082.233.3555</p>
+                    <div>
+                        <input type = "text" placeholder = "Địa chỉ Email">
+                        <i class = "fas fa-envelope"></i>
+                    </div>
+                </div>
+
+                <div class = "footer-between">
+                    <h2>Theo dõi VnNews trên</h2>
+                    <!--social icons -->
+                <div class = "social-icons">
+                    <ul>
+                        <li>
+                            <a href= "#"><i class = "fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href= "#"><i class = "fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href= "#"><i class = "fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+
+            <p>Copyright &copy; 1997-2022. Toàn bộ bản quyền thuộc VnNews</p>
+        </footer>
+
+        <script src="script.js" async defer></script>
+        
+        <div id="backtop">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </body>
+</html>
